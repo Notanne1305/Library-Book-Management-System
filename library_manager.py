@@ -2,7 +2,6 @@ from book import Book
 
 class LibraryManager:
     def __init__(self):
-        # debug: confirm constructor runs
         print("LibraryManager.__init__ called")
         self.books = []
         
@@ -52,7 +51,6 @@ class LibraryManager:
             
     #Display all books
     def display_all_books(self):
-        # defensive: avoid AttributeError if __init__ didn't run
         books = getattr(self, 'books', None)
         if not books:
             print("\nNo books in the library.")
